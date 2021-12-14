@@ -1,5 +1,5 @@
 {
-	"name": "filtered_json_pipeline",
+	"name": "json_pipeline",
 	"properties": {
 		"activities": [
 			{
