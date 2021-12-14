@@ -36,7 +36,7 @@
 						"value": "@activity('Download JSON').output.artObjects",
 						"type": "Expression"
 					},
-					"isSequential": true,
+					"isSequential": false,
 					"activities": [
 						{
 							"name": "Append image",
@@ -71,7 +71,7 @@
 						"value": "@variables('images')",
 						"type": "Expression"
 					},
-					"isSequential": true,
+					"isSequential": false,
 					"activities": [
 						{
 							"name": "Download file",
