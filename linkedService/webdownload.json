@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "HttpServer",
 		"typeProperties": {
-			"url": "https://www.rijksmuseum.nl/",
+			"url": "@item().url",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Anonymous"
 		}
