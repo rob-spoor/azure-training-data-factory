@@ -11,6 +11,12 @@
 						"dependencyConditions": [
 							"Succeeded"
 						]
+					},
+					{
+						"activity": "If File exists",
+						"dependencyConditions": [
+							"Failed"
+						]
 					}
 				],
 				"policy": {
@@ -60,7 +66,14 @@
 			{
 				"name": "JSON file",
 				"type": "Delete",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "If File exists",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -80,12 +93,58 @@
 							}
 						}
 					},
+					"logStorageSettings": {
+						"linkedServiceName": {
+							"referenceName": "datalake",
+							"type": "LinkedServiceReference"
+						},
+						"path": "demo/rob"
+					},
 					"enableLogging": true,
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
 						"recursive": false,
 						"enablePartitionDiscovery": false
 					}
+				}
+			},
+			{
+				"name": "If File exists",
+				"type": "IfCondition",
+				"dependsOn": [
+					{
+						"activity": "File exists",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@activity('File exists').output",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "File exists",
+				"type": "Validation",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "json",
+						"type": "DatasetReference",
+						"parameters": {
+							"pipelineid": {
+								"value": "@pipeline().RunId",
+								"type": "Expression"
+							}
+						}
+					},
+					"timeout": "7.00:00:00",
+					"sleep": 10
 				}
 			}
 		],
