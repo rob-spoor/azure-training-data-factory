@@ -5,12 +5,20 @@
 			"referenceName": "datalake",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"pipelineid": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "customers.json",
+				"fileName": {
+					"value": "concat('customers_', @dataset().pipelineid, '.json')",
+					"type": "Expression"
+				},
 				"folderPath": "rob",
 				"fileSystem": "demo"
 			}
