@@ -40,7 +40,13 @@
 				"outputs": [
 					{
 						"referenceName": "json",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"pipelineid": {
+								"value": "@pipeline().RunId",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
