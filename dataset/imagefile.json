@@ -9,8 +9,7 @@
 		"type": "Binary",
 		"typeProperties": {
 			"location": {
-				"type": "HttpServerLocation",
-				"relativeUrl": "@item().url"
+				"type": "HttpServerLocation"
 			}
 		}
 	}
