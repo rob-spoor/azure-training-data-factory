@@ -1,0 +1,29 @@
+{
+	"name": "time_trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "filtered_json_pipeline",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2021-12-14T11:00:00Z",
+				"timeZone": "UTC",
+				"schedule": {
+					"hours": [
+						11
+					]
+				}
+			}
+		}
+	}
+}
