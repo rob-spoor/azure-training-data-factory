@@ -39,7 +39,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "json",
+						"referenceName": "json_with_id",
 						"type": "DatasetReference",
 						"parameters": {
 							"pipelineid": {
