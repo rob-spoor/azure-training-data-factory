@@ -9,7 +9,10 @@
 		"type": "Json",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation"
+				"type": "AzureBlobFSLocation",
+				"fileName": "customers.json",
+				"folderPath": "rob",
+				"fileSystem": "demo"
 			}
 		},
 		"schema": {}
