@@ -1,5 +1,5 @@
 {
-	"name": "imagefile",
+	"name": "webimage",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "webdownload",

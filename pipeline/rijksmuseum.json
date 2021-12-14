@@ -106,7 +106,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "imagefile",
+									"referenceName": "webimage",
 									"type": "DatasetReference"
 								}
 							],
