@@ -5,11 +5,6 @@
 			"referenceName": "datalake",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"pipelineid": {
-				"type": "string"
-			}
-		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {
