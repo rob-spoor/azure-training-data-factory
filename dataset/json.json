@@ -16,7 +16,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "concat('customers_', @dataset().pipelineid, '.json')",
+					"value": "@concat('customers_', dataset().pipelineid, '.json')",
 					"type": "Expression"
 				},
 				"folderPath": "rob",
