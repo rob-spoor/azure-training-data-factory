@@ -6,7 +6,7 @@
 		"pipelines": [
 			{
 				"pipelineReference": {
-					"referenceName": "filtered_json_pipeline",
+					"referenceName": "json_pipeline",
 					"type": "PipelineReference"
 				}
 			},
