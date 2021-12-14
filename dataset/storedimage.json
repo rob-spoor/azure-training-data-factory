@@ -9,7 +9,10 @@
 		"type": "Binary",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation"
+				"type": "AzureBlobFSLocation",
+				"fileName": "@item().id",
+				"folderPath": "rob/images",
+				"fileSystem": "demo"
 			}
 		}
 	}
